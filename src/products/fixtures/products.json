@@ -1,0 +1,58 @@
+[
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "title": "Iphone",
+        "slug": "iphone-1",
+        "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+        "price": "39.99",
+        "image": "products/20837337640/20837337640.png",
+        "featured": true,
+        "active": true,
+        "timestamp": "2017-12-11T07:41:48.611Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "title": "Samsung Tablet",
+        "slug": "samsung-tablet",
+        "description": "Nice Tablet",
+        "price": "300.00",
+        "image": "products/30293205349/30293205349.png",
+        "featured": false,
+        "active": true,
+        "timestamp": "2017-12-11T07:41:48.611Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "title": "Hat",
+        "slug": "hat",
+        "description": "This is nice Hat",
+        "price": "39.99",
+        "image": "products/4748178126/4748178126.jpeg",
+        "featured": true,
+        "active": true,
+        "timestamp": "2018-01-08T06:05:40.813Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "title": "Ink",
+        "slug": "ink",
+        "description": "Ink is blue",
+        "price": "10.00",
+        "image": "products/14261697855/14261697855.jpeg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2018-01-08T06:06:08.845Z"
+    }
+}
+]

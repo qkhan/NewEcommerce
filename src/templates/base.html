@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Obaju e-commerce template">
+    <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
+    <meta name="keywords" content="">
+    {% include 'base/css.html' %}
+    {% block title %}
+    <title>Buy Designer Dress</title>
+    {% endblock %}
+    <script src='{% static "/js/respond.min.js" %}'></script>
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+  </head>
+  <body>
+
+    {% include 'base/top.html' with basename='E-Commerce' %}
+    {% include 'base/nav.html' with basename='E-Commerce' %}
+  <div id="all">
+    {% block content %}
+    {% endblock %}
+
+    {% include 'base/footer.html' with basename='E-Commerce' %}
+    {% include 'base/copyright.html' with basename='E-Commerce' %}
+  </div>
+  <!-- /#all -->
+    {% include 'base/js.html' %}
+
+    </body>
+</html>

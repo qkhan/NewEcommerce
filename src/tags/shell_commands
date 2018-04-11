@@ -1,0 +1,56 @@
+Qaisars-iMac:src qaisarkhan$ source ../bin/activate
+(ecommerce) Qaisars-iMac:src qaisarkhan$ python manage.py shell
+Python 3.6.3 (default, Oct  4 2017, 06:09:15)
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.37)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from tags.models import Tag
+>>> Tags.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Tags' is not defined
+>>> Tag.objects.all()
+<QuerySet [<Tag: [1] I-phone>, <Tag: [2] samsung>, <Tag: [3] black>, <Tag: [4] mobile>, <Tag: [5] red>, <Tag: [6] blue>]>
+>>> Tag.objects.last()
+<Tag: [6] blue>
+>>> blue = Tag.objects.last()
+>>> blue.title
+'blue'
+>>> blue.active
+True
+>>> blue.products
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x10fe74f28>
+>>> blue.products.all()
+<ProductQuerySet [<Product: [9] Hat>, <Product: [10] Ink>]>
+>>> exit()
+(ecommerce) Qaisars-iMac:src qaisarkhan$ python manage.py shell
+Python 3.6.3 (default, Oct  4 2017, 06:09:15)
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.37)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from products.models import Product
+>>> qs = Product.objects.all()
+>>> qs
+<ProductQuerySet [<Product: [6] Iphone>, <Product: [7] Samsung Tablet>, <Product: [9] Hat>, <Product: [10] Ink>]>
+>>> qs.first
+<bound method QuerySet.first of <ProductQuerySet [<Product: [6] Iphone>, <Product: [7] Samsung Tablet>, <Product: [9] Hat>, <Product: [10] Ink>]>>
+>>> qs.first()
+<Product: [6] Iphone>
+>>> iphone = qs.first()
+>>> iphone
+<Product: [6] Iphone>
+>>> tshirt.title
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'tshirt' is not defined
+>>> iphone.title
+'Iphone'
+>>> iphone.tag_set.all()
+<QuerySet [<Tag: [1] I-phone>, <Tag: [3] black>, <Tag: [4] mobile>, <Tag: [5] red>]>
+>>> iphone.tag_set.filter(title__iexact=black)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'black' is not defined
+>>> iphone.tag_set.filter(title__iexact='black')
+<QuerySet [<Tag: [3] black>]>
+>>>

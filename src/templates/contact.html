@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class='text-center'>
+
+  <h1>{{ title }}</h1>
+</div>
+<div class='container'>
+  <div class='row'>
+    <div class='col'>
+      <!-- <img src="{% static "img/beach.jpeg" %}" class='img-fluid'/> -->
+
+      <div class='col-md-6 col-12 mx-auto'>
+        <p>{{ content }} </p>
+        <form class='contact-form' method='POST' action='{% url "contact" %}'> {% csrf_token %}
+          {{ form.as_p }}
+          <button type='submit' class='btn btn-default'>Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top image-fluid" src="{{ obj.image.url }}" alt="{{ obj.title }} Logo">
+  <div class="card-block">
+    <h4 class="card-title">{{ obj.title }}</h4>
+    <p class="card-text">{{ obj.description | truncatewords:10 }}</p>
+    <a href='{{ obj.get_absolute_url }}' class="btn btn-primary">
+        View</a>
+    {% include 'products/snippet/update-cart.html' with product=obj cart=cart %}
+  </div>
+</div>
